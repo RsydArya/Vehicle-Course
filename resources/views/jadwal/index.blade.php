@@ -35,7 +35,7 @@
     <div class="collapse navbar-collapse  w-auto  max-height-vh-100 h-100" id="sidenav-collapse-main">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link  active" href="{{ route('pages.index') }}">
+          <a class="nav-link" href="{{ route('pages.index') }}">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <svg width="12px" height="12px" viewBox="0 0 45 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <title>shop </title>
@@ -51,11 +51,11 @@
                 </g>
               </svg>
             </div>
-            <span class="nav-link-text ms-1">Peserta</span>
+            <span class="nav-link-text ms-1">Dashboard</span>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link  " href="{{ route('instruktur.index') }}">
+          <a class="nav-link  active" href="instruktur.blade.php">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <svg width="12px" height="12px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <title>office</title>
@@ -71,14 +71,14 @@
                 </g>
               </svg>
             </div>
-            <span class="nav-link-text ms-1">Instruktur</span>
+            <span class="nav-link-text ms-1">Jadwal</span>
           </a>
         </li>
         <!-- <li class="nav-item mt-3">
           <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Account pages</h6>
         </li>
         <li class="nav-item">
-          <a class="nav-link  " href="#">
+          <a class="nav-link  " href="../pages/profile.html">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <svg width="12px" height="12px" viewBox="0 0 46 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <title>customer-support</title>
@@ -150,9 +150,9 @@
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
             <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:;">Pages</a></li>
-            <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Peserta</li>
+            <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Jadwal</li>
           </ol>
-          <h6 class="font-weight-bolder mb-0">Dashboard</h6>
+          <h6 class="font-weight-bolder mb-0">Jadwal</h6>
         </nav>
         <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
           <div class="ms-md-auto pe-md-3 d-flex align-items-center">
@@ -164,7 +164,7 @@
           <ul class="navbar-nav  justify-content-end">
             <li class="nav-item d-flex align-items-center">
               <a href="{{ route('user.sign-in') }}" class="nav-link text-body font-weight-bold px-0">
-                <i class="bi bi-box-arrow-left"></i>
+              <i class="bi bi-box-arrow-left"></i>
                 <span class="d-sm-inline d-none">Log Out</span>
               </a>
             </li>
@@ -266,10 +266,10 @@
           <div class="card mb-4">
             <div class="card-header pb-0 d-flex justify-content-between">
               <div >
-                <h6>Peserta</h6>
+                <h6>Jadwal</h6>
               </div>
               <div>
-                <a href="{{route('pages.create')}}"><button type="button" class="btn bg-gradient-primary"><i class="bi bi-plus-circle-fill"></i></button></a>
+                <a href="{{route('jadwal.create')}}"><button type="button" class="btn bg-gradient-primary"><i class="bi bi-plus-circle-fill"></i></button></a>
               </div>
             </div>
             <div class="card-body px-0 pt-0 pb-2">
@@ -277,52 +277,50 @@
                 <table class="table align-items-center mb-0">
                   <thead>
                     <tr>
-                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Nama Peserta</th>
-                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">No HP</th>
-                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Status Pembayaran</th>
+                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Nama</th>
+                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Pengalaman</th>
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">No HP</th>
                       <th class="text-secondary opacity-7"></th>
                     </tr>
                   </thead>
                   <tbody>
-                  @forelse ($peserta as $p)
+                    @forelse ($jadwal as $jdw)
                     <tr>
                       <td>
                         <div class="d-flex px-2 py-1">
                           <div class="d-flex flex-column justify-content-center">
-                            <h6 class="mb-0 text-sm">{{ $p->nama }}</h6>
+                            <h6 class="mb-0 text-sm">{{ $jdw->nama }}</h6>
                           </div>
                         </div>
                       </td>
                       <td>
-                        <p class="text-xs font-weight-bold mb-0">{{ $p->no_hp }}</p>
-                        <!-- <p class="text-xs text-secondary mb-0">Organization</p> -->
+                        <p class="text-xs font-weight-bold mb-0">{{ $jdw->pengalaman }}</p>
                       </td>
                       <td class="align-middle text-center text-sm">
-                        <p class="text-xs text-secondary mb-0">{{ $p->status_pembayaran }}</p>
+                        <p class="text-xs text-secondary mb-0">{{ $jdw->no_hp }}</p>
                       </td>
-                      
                       <td class="align-middle">
-                        <form id="deleteForm" onsubmit="return confirm('Apakah Anda Yakin?');" action="{{ route('pages.destroy', $p->id) }}" method="POST">
-                          <a href="{{ route('pages.show', $p->id) }}"  ><button type="button" class="btn bg-gradient-info"><i class="bi bi-eye-fill"></i></button></i></a>
-                          <a href="{{ route('pages.edit', $p->id) }}"  ><button type="button" class="btn bg-gradient-success"><i class="bi bi-pencil-fill"></i></button></a>
+                        <form id="deleteForm" onsubmit="return confirm('Apakah Anda Yakin ?');" action="{{ route('instruktur.destroy', $instruct->id) }}" method="POST">
+                          <a href="{{ route('instruktur.show', $instruct->id) }}"  ><button type="button" class="btn bg-gradient-info"><i class="bi bi-eye-fill"></i></button></i></a>
+                          <a href="{{ route('instruktur.edit', $instruct->id) }}"  ><button type="button" class="btn bg-gradient-success"><i class="bi bi-pencil-fill"></i></button></a>
                           @csrf 
                           @method('DELETE')
-                          <button type="submit" class="btn bg-gradient-danger deleteBtn"><i class="bi bi-trash-fill"></i></button>
+                          <button id="deleteBtn" type="submit" class="btn bg-gradient-danger deleteBtn"><i class="bi bi-trash-fill"></i></button>
                         </form>
                       </td>
                     </tr>
                     @empty
-                      <h3 class="text-3xl font-bold mb-5 ps-3">Tidak Ada Peserta</h3>
+                      <h3 class="text-3xl font-bold mb-5 ps-4">Tidak Ada Jadwal</h3>
                     @endforelse
                   </tbody>
                 </table>
-                {{ $peserta->links() }}
+                {{ $jadwal->links() }}
               </div>
             </div>
           </div>
         </div>
       </div>
-
+    
       </div>
       <footer class="footer pt-3  ">
         <div class="container-fluid">
@@ -358,6 +356,7 @@
       </footer>
     </div>
   </main>
+
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script>
       document.querySelectorAll('.deleteBtn').forEach(item => {
@@ -403,4 +402,5 @@
         @endif
     </script>
   </body>
+
 </html>

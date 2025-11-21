@@ -32,8 +32,8 @@ class InstrukturController extends Controller
             'no_hp' => 'required',
         ]);
 
-        Instructur::create([
-            'nama' => $request->name,
+        Instruktur::create([
+            'nama' => $request->nama,
             'pengalaman' => $request->pengalaman,
             'no_hp' => $request->no_hp,
         ]);
@@ -67,7 +67,7 @@ class InstrukturController extends Controller
 
         $instruktur = Instruktur::findOrFail($id);
         $instruktur->update([
-            'nama' => $request->name,
+            'nama' => $request->nama,
             'pengalaman' => $request->pengalaman,
             'no_hp' => $request->no_hp,
         ]);

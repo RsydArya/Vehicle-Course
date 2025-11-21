@@ -13,7 +13,7 @@
           <div class="row">
             <div class="col-lg-7 mx-auto d-flex justify-content-center flex-column">
               <h3 class="text-center">Form Instruktur</h3>
-              <form action="{{route('instructur.update',$instructur->id)}}" method="POST">
+              <form action="{{route('instruktur.update',$instruktur->id)}}" method="POST">
                 @csrf
                 @method('PUT')
                 <div class="card-body">
@@ -40,13 +40,13 @@
                   <!-- <div class="mb-4">
                     <label>Contact</label>
                     <div class="input-group">
-                      <input type="number" class="form-control @error('contact') is-invalid @enderror" value="{{old('contact',$instructur->contact)}}" placeholder="" name="contact">
+                      <input type="number" class="form-control @error('contact') is-invalid @enderror" value="{{old('contact',$instruktur->contact)}}" placeholder="" name="contact">
                     </div>
                   </div>
                   <div class="mb-4">
                     <label>Specialization</label>
                     <div class="input-group">
-                      <input type="text" class="form-control @error('specialization') is-invalid @enderror" value="{{old('specialization',$instructur->specialization)}}" placeholder="" name="specialization">
+                      <input type="text" class="form-control @error('specialization') is-invalid @enderror" value="{{old('specialization',$instruktur->specialization)}}" placeholder="" name="specialization">
                     </div>
                   </div> -->
                   

@@ -36,7 +36,7 @@
                             <h4>Nama : {{$instruktur->nama}}</h4>
                             <!-- <p>Pengalaman : {{$instruktur->pengalaman}}</p> -->
                             <p>No HP : {{$instruktur->no_hp}}</p>
-                            <!-- <p>contact : {{$instructur->contact}}</p> -->
+                            <!-- <p>contact : {{$instruktur->contact}}</p> -->
                         </div>
                     </div>
                     <div class="row">
