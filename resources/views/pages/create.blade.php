@@ -51,7 +51,13 @@
                   <div class="mb-4">
                     <label>Status Pembayaran</label>
                     <div class="input-group">
-                      <input type="text" class="form-control" placeholder="" name="status_pembayaran">
+                      <!-- <input type="text" class="form-control" placeholder="" name="status_pembayaran"> -->
+                      <select name="status_pembayaran" id="status_pembayaran" class="form-control">
+                        <option value="Lunas">Lunas</option>
+                        <option value="Belum" selected>Belum</option>
+                      </select>
+
+
                     </div>
                   </div>
                   
