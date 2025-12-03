@@ -10,6 +10,8 @@ Route::get('/peserta', [PesertaController::class, 'index'])->name('pages.index')
 
 Route::resource('/pages',\App\Http\Controllers\PesertaController::class);
 Route::resource('/instruktur',\App\Http\Controllers\InstrukturController::class);
+Route::resource('/jadwal', \App\Http\Controllers\JadwalController::class);
+
 
 Route::get('/user.sign-up', [\App\Http\Controllers\UserController::class, 'signup'])->name('user.sign-up');
 Route::post('/user/sign-up', [\App\Http\Controllers\UserController::class, 'registration'])->name('user.registration');

@@ -19,4 +19,10 @@ class Instruktur extends Model
         'pengalaman',
         'no_hp',
     ];
+
+    public function jadwal()
+    {
+    return $this->hasMany(Jadwal::class);
+    }
+
 }

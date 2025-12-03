@@ -23,12 +23,6 @@
                         <input class="form-control" placeholder=""  type="text" name="nama" >
                       </div>
                     </div>
-                    <!-- <div class="col-md-6 ps-2">
-                      <label>Last Name</label>
-                      <div class="input-group">
-                        <input type="text" class="form-control" placeholder="" aria-label="Last Name..." >
-                      </div>
-                    </div> -->
                   </div>
                   <div class="mb-4">
                     <label>No HP</label>
@@ -51,7 +45,6 @@
                   <div class="mb-4">
                     <label>Status Pembayaran</label>
                     <div class="input-group">
-                      <!-- <input type="text" class="form-control" placeholder="" name="status_pembayaran"> -->
                       <select name="status_pembayaran" id="status_pembayaran" class="form-control">
                         <option value="Lunas">Lunas</option>
                         <option value="Belum" selected>Belum</option>
@@ -62,12 +55,6 @@
                   </div>
                   
                   <div class="row">
-                    <!-- <div class="col-md-12">
-                      <div class="form-check form-switch mb-4">
-                        <input class="form-check-input bg-dark" type="checkbox" id="flexSwitchCheckDefault" checked="">
-                        <label class="form-check-label" for="flexSwitchCheckDefault">I agree to the <a href="javascript:;" class="text-dark"><u>Terms and Conditions</u></a>.</label>
-                      </div>
-                    </div> -->
                     <div class="col-md-12">
                       <button type="submit" class="btn btn-dark w-100">Add</button>
                     </div>

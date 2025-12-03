@@ -12,7 +12,7 @@ class JadwalController extends Controller
     // Menampilkan semua data jadwal
     public function index()
     {
-        $jadwal = Jadwal::with(['peserta', 'instruktur'])->get();
+        $jadwal = Jadwal::with(['peserta', 'instruktur'])->paginate(10);
         return view('jadwal.index', compact('jadwal'));
     }
 
@@ -23,6 +23,7 @@ class JadwalController extends Controller
         $instruktur = Instruktur::all();
         return view('jadwal.create', compact('peserta', 'instruktur'));
     }
+    
 
     // Simpan data ke database
     public function store(Request $request)

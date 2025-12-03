@@ -46,7 +46,6 @@
                   <div class="mb-4">
                     <label>Status Pembayaran</label>
                     <div class="input-group">
-                      <!-- <input type="text" class="form-control @error('status_pembayaran') is-invalid @enderror" value="{{old('status_pembayaran',$peserta->status_pembayaran)}}"" placeholder="" name="status_pembayaran"> -->
                       <select name="status_pembayaran" id="status_pembayaran" class="form-control">
                         <option value="Lunas" {{ $peserta->status_pembayaran == 'Lunas' ? 'selected' : '' }}>Lunas</option>
                         <option value="Belum" {{ $peserta->status_pembayaran == 'Belum' ? 'selected' : '' }}>Belum</option>

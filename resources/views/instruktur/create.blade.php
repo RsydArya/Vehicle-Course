@@ -36,18 +36,6 @@
                       <input type="text" class="form-control" placeholder="" name="no_hp">
                     </div>
                   </div>
-                  <!-- <div class="mb-4">
-                    <label>contact</label>
-                    <div class="input-group">
-                      <input type="number" class="form-control" placeholder="" name="contact">
-                    </div>
-                  </div>
-                  <div class="mb-4">
-                    <label>Specialization</label>
-                    <div class="input-group">
-                      <input type="text" class="form-control" placeholder="" name="specialization">
-                    </div>
-                  </div> -->
                   <div class="row">
                     <div class="col-md-12">
                       <button type="submit" class="btn btn-dark w-100">Add</button>

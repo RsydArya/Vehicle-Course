@@ -22,15 +22,13 @@ class Jadwal extends Model
         'status',
     ];
 
-    // relasi ke peserta
     public function peserta()
     {
-        return $this->belongsTo(Peserta::class);
+        return $this->belongsTo(Peserta::class, 'peserta_id');
     }
 
-    // relasi ke instruktur
     public function instruktur()
     {
-        return $this->belongsTo(Instruktur::class);
+        return $this->belongsTo(Instruktur::class, 'instruktur_id');
     }
 }

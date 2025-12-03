@@ -21,4 +21,14 @@ class Peserta extends Model
         'paket',
         'status_pembayaran',
     ];
+
+    public function jadwal()
+    {
+    return $this->hasMany(Jadwal::class);
+    }
+
+    
 }
+
+
+
